@@ -16,7 +16,7 @@ Exim::SpoolMessage - read and parse Exim spool files
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -32,7 +32,7 @@ Exim specification document.
     my $msg = Exim::SpoolMessage->load('/var/spool/exim/input',
                                        '1N4toN-000G2Z-6M');
     print "Return-path: <", $msg->return_path, ">\n";
-    print join "\n", $msg->head->as_string(), @{$msg->body};
+    print $msg->head->as_string(), "\n", @{$msg->body};
 
 The module was written in order to be able to provide external commands
 access to the contents of the message during message filtering process.
@@ -256,8 +256,6 @@ Mail::Header object with the message headers.
 Reference to an array with the contents of the message body. Each
 item represents a line of the body.
 
-Note: Lines are not terminated by newlines.
-
 =head2 Other methods
 
 In addition, there are many other mehotds that will provide access to
@@ -359,6 +357,8 @@ This software is distributed under an ISC style license, please see
 <http://km.krot.org/code/license.txt> for details.
 
 =cut
+
+sub DESTROY { 1; }
 
 sub AUTOLOAD {
     my $self = shift;

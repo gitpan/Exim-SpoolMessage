@@ -1,5 +1,8 @@
 Revision history for Exim-SpoolMessage
 
+0.02    2009-11-02
+        Fix small error in docs.
+
 0.01    2009-11-02
         First version, released on an unsuspecting world.
 
