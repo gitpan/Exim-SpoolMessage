@@ -12,11 +12,11 @@ use Mail::Header;
 
 =head1 NAME
 
-Exim::SpoolMessage - read and parse Exim spool files
+Exim::SpoolMessage - Read and parse Exim spool files.
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS

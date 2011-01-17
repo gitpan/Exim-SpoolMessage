@@ -1,5 +1,8 @@
 Revision history for Exim-SpoolMessage
 
+0.03	2011-01-17
+	Make description format consistent across modules.
+
 0.02    2009-11-02
         Fix small error in docs.
 
