@@ -16,7 +16,7 @@ Exim::SpoolMessage - Read and parse Exim spool files.
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
@@ -43,6 +43,10 @@ access to the contents of the message during message filtering process.
 
 Takes to parameters - location of the input directory where spool files
 are located and the message id of the desired message.
+
+NOTE: $input_dir has to be location of the directory where spool files
+are located. If split_spool_directory it will not equal to the spool
+directory.
 
 Returns an object with a lot of methods, please see below for details.
 
